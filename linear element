@@ -1,0 +1,27 @@
+//linear search of an element
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+     int []num={25,69,46,13,98,35,75,64};
+     Scanner sc=new Scanner(System.in);
+     int target=sc.nextInt();
+     int ans =search(num,target);
+     System.out.println(ans);
+    }
+    static int search(int[]arr,int target)
+    {
+        if(arr.length==0)
+        {
+            return -1;
+
+        }
+        //using enhanced for loop since we don't use index us reference
+        for (int element : arr) {
+            if (element == target) {
+                return element;
+            }
+        }
+        return 0;
+    }
+
+}
