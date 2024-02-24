@@ -1,0 +1,26 @@
+//search the maximum number in the 2D array
+import java.util.*;
+class Main
+{
+    public static void main(String[] args) {
+        int [][]arr={{45,77,89,23,96},{21,31,41,51},{22,33,44,55,66}};
+        System.out.println(max(arr));
+
+    }
+    static int max(int [][]arr)
+    {
+        int max=arr[0][0]; //or we can use Integer.MIN_VALUE instead
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=0;j<arr[i].length;j++)
+            {
+                if(arr[i][j]>max)
+                {
+                    max=arr[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+}
