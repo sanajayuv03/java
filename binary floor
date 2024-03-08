@@ -1,0 +1,41 @@
+import java.util.*;
+class Main
+{
+    public static void main(String []args )
+    {
+        int [] arr={1,2,3,4,6,7,8,9};
+        int target=5;
+        int ans =ceiling(arr,target);
+        System.out.println(ans);
+    }
+    static int ceiling (int []arr,int target)
+    {
+        int st=0;
+        int end =arr.length-1;
+        boolean in= arr[st]<arr[end];
+        while(st<=end)
+        {
+            int mid =st+(end-st)/2;
+            if(in)
+            {
+                if(target>arr[mid])
+                {
+                    st=mid+1;
+                }
+                else {
+                    end=mid-1;
+                }
+            }
+            else {
+                if(target<arr[mid])
+                {
+                    st=mid+1;
+                }
+                else {
+                    end=mid-1;
+                }
+            }
+        }
+        return arr[end];
+    }
+}
