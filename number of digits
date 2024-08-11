@@ -1,0 +1,15 @@
+//we can use this for any number system including binary
+// just adjust the base according to the number system
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        int n=1298274658;
+        int b=10;
+        int ans=(int)((Math.log(n)/Math.log(b))+1);
+        System.out.print(ans);
+    }
+}
+// log n is the time complexity
+//n>>1 count=0 count++ gives the same
