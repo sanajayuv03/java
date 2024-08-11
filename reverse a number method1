@@ -1,0 +1,21 @@
+import java.util.*;
+class main
+{
+    public static void main(String [] args)
+    {
+        reverse(1234);
+        System.out.println(sum);
+
+    }
+    static int sum =0;// which can be accessed by all the function when we declear outside
+    static void reverse(int n)
+    {
+        if(n==0)
+        {
+            return;
+        }
+        int rem=n%10;
+        sum=sum*10+rem;
+         reverse(n/10);
+    }
+}
