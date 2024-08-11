@@ -1,0 +1,22 @@
+import java.util.*;
+class main
+{
+    public static void main(String [] args)
+    {
+        int n=9;
+        int ans=setbit(n);
+        System.out.print(ans);
+    }
+    static int setbit(int n) {
+        int count = 0;
+        while (n > 0)
+        {
+            if ((n & 1) == 1)
+            {
+                count++;
+            }
+            n=n>>1;
+        }
+        return count;
+    }
+}
