@@ -1,0 +1,20 @@
+//identify the number which is not repeated in the array
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        int [] arr={1,2,3,3,2,1,4};
+        int ans= repeat(arr);
+        System.out.print(ans);
+    }
+    static int repeat(int [] arr)
+    {
+        int num=0;
+        for(int n:arr)
+        {
+            num=num^n;
+        }
+        return num;
+    }
+}
