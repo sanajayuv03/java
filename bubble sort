@@ -1,0 +1,29 @@
+import  java.util.*;
+class Main
+{
+    public static void main(String[] args) {
+        int []ars={1,4,5,3,2};
+        sort(ars); // Arrays.toString(sort(ars)) tries to call sort
+        // and then convert the result to a string. Since sort is void,
+        // this will cause a compilation error.
+        // The sort method should sort the array in place,
+        // so you should not use Arrays.toString(sort(ars)).
+        System.out.println(Arrays.toString(ars));
+    }
+    static void sort(int [] arr)
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=1;j<arr.length-i;j++)
+            {
+                if(arr[j]<arr[j-1])
+                {
+                    int temp=arr[j-1];
+                    arr[j-1]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+    }
+
+}
