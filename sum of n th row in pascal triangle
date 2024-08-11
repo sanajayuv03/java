@@ -1,0 +1,25 @@
+public class Main{
+
+    public static void main(String[] args) {
+        // Example row number
+        int n = 5;  // Change this to the row number you want
+
+        // Calculate the sum of the n-th row
+        long sum = calculateRowSum(n);
+
+        // Print the result
+        System.out.println("The sum of the " + n + "-th row in Pascal's Triangle is: " + sum);
+    }
+
+    /**
+     * Calculate the sum of the n-th row in Pascal's Triangle.
+     * The sum is 2^n.
+     *
+     * @param n The row number in Pascal's Triangle
+     * @return The sum of the elements in the n-th row
+     */
+    public static long calculateRowSum(int n) {
+        // Calculate 2^n using bit shifting for efficiency
+        return 1L << n;
+    }
+}
