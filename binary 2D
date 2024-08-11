@@ -1,0 +1,28 @@
+import java.util.*;
+class main {
+    public static void main(String[] args) {
+        int[][] arr = {
+                {10, 20, 30, 40},
+                {11, 22, 33, 44},
+                {13, 23, 34, 45},
+                {15, 25, 35, 46}
+        };
+        System.out.print(Arrays.toString(search(arr, 35)));
+    }
+
+    static int[] search(int[][] arr, int target) {
+        int row = 0;
+        int column = arr.length - 1;
+        while (row < arr.length && column > 0) {
+            if (arr[row][column] == target) {
+                return new int[]{row, column};
+            }
+            if (arr[row][column] < target) {
+                row++;
+            } else {
+                column--;
+            }
+        }
+        return new int[]{-1, -1};
+    }
+}
