@@ -1,0 +1,32 @@
+import java.util.*;
+class main
+{
+    public static void main(String [] args)
+    {
+        int n=12;
+        for(int i=0;i<=n;i++)
+        {
+
+            System.out.println(i+" "+nature(i));
+        }
+    }
+    static boolean nature(int i)
+    {
+        if(i<=1)
+        {
+            return false;
+        }
+        int c=2;
+        while(c*c<=i)
+        {
+            if(i%c==0)
+            {
+                return false;
+            }
+            else {
+                c++;
+            }
+        }
+        return true;
+    }
+}
