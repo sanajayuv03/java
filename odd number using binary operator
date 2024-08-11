@@ -1,0 +1,13 @@
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        System.out.println(odd(3));
+    }
+    static boolean odd(int n)
+    {
+        return ((n&1)==1);// 3 it converts into binary language 11 and it add 01 it gives 01 .
+        // since the last term is 1 ==(1*2^0)=1 so it is add; AND operator always return the given value
+    }
+}
