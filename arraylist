@@ -1,0 +1,23 @@
+import java.util.*;
+class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Integer> list=new ArrayList<>();
+         for(int i=0;i<5;i++)
+         {
+             list.add(sc.nextInt());
+         }
+        for(int i=0;i<5;i++)
+        {
+           System.out.println(list.get(i));// list [index] will not work in array list
+
+        }
+    }
+}
+/*  ArrayList<Integer> list=new ArrayList<>(); this is the syntax ; list.add() adds the element to the list;
+list.set(0,99) this change the 0 th index element to 99;
+list.get(index) get the perticular element in the index
+list.remove(index) will remove the element
+
+ */
