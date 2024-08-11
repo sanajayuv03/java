@@ -1,0 +1,23 @@
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        int [] arr={21,23,24,24,45,67,89};
+        int target=24; //we can use ArrayList<Integer> list = new ArrayList<>(); initialize
+        // we should call search(arr,target,0,list)
+        System.out.print(search(arr,target,0,new ArrayList<>()));
+    }
+    static ArrayList<Integer> search(int [] arr,int target,int i,ArrayList<Integer> list)
+    {
+       if(i==arr.length-1)
+       {
+           return list;
+       }
+       if(arr[i]==target)
+       {
+           list.add(i);
+       }
+       return search(arr,target,i+1,list);
+    }
+}
