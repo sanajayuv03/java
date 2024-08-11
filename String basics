@@ -1,0 +1,16 @@
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        String name= " sanjay kumar is an zoho employee ";
+        System.out.println(Arrays.toString(name.toCharArray()));
+        System.out.println(name.toUpperCase());
+        System.out.println(Arrays.toString(name.split(" ")));
+        System.out.println(name.trim());
+        System.out.println(name.strip());
+        System.out.println(name);
+        
+    }
+
+}
