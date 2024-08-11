@@ -1,0 +1,18 @@
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        int [] arr={11,22,33,34,45,32,67,89,90};
+        System.out.print(sort(arr,0));
+    }
+    static boolean sort(int [] arr,int i)
+    {
+
+        if(i==arr.length-1)
+        {
+            return true;
+        }
+        return ((arr[i]<arr[i+1])&& sort(arr,i+1));
+    }
+}
