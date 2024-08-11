@@ -1,0 +1,29 @@
+import java.util.*;
+class Main
+{
+    public static void main(String [] agrs)
+    {
+        int n=1024043;
+       System.out.print(count(n,0));
+
+    }
+  /*  static int count(int n)
+    {
+        return helper(n,0);
+    } */
+    private static int count(int n,int c)
+    {
+        if(n==0)
+        {
+            return c;
+        }
+        int rem=n%10;
+        if(n%10==0)
+        {
+            return count(n/10,c+1);
+        }
+        else {
+            return count(n/10,c);
+        }
+    }
+}
