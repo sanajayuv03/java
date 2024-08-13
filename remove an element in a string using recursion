@@ -1,0 +1,52 @@
+import java.util.*;
+class main
+{
+    public static void main(String [] args)
+    {
+            skip(" ","yuvasri");
+    }
+    static void skip(String processed,String unpro)
+    {
+        if(unpro.isEmpty())
+        {
+            System.out.print(processed);
+            return;
+
+        }
+        char ch=unpro.charAt(0);
+        if(ch=='a')
+        {
+            skip(processed, unpro.substring(1));
+        }
+        else {
+            skip(processed+ch, unpro.substring(1));
+        }
+
+    }
+
+}
+/*import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        System.out.println(skip("abcdab"));
+    }
+    static String skip(String up)
+    {
+        if(up.isEmpty())
+        {
+
+            return" ";
+        }
+        char ch=up.charAt(0);
+        if(ch=='a')
+        {
+            return skip(up.substring(1));
+        }
+
+        return ch+skip(up.substring(1));
+    }
+}
+
+ */
